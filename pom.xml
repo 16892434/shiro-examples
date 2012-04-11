@@ -48,6 +48,7 @@
 		<spring.version>3.1.1.RELEASE</spring.version>
 		<querydsl.version>2.3.2</querydsl.version>
 		<shiro.version>1.2.0</shiro.version>
+		<jetty.version>6.1.26</jetty.version>
 		<project.build.sourceEncoding>UTF-8</project.build.sourceEncoding>
 	</properties>
 
@@ -78,6 +79,7 @@
 
 	<dependencies>
 		<!-- Spring Framework -->
+		<!-- 
 		<dependency>
 			<groupId>org.springframework</groupId>
 			<artifactId>spring-beans</artifactId>
@@ -118,8 +120,10 @@
 			<artifactId>spring-test</artifactId>
 			<version>${spring.version}</version>
 			<scope>test</scope>
-		</dependency>
+		</dependency> 
+		-->
 		<!-- Spring MVC -->
+		<!-- 
 		<dependency>
 			<groupId>org.springframework</groupId>
 			<artifactId>spring-web</artifactId>
@@ -134,14 +138,16 @@
 			<groupId>cglib</groupId>
 			<artifactId>cglib</artifactId>
 			<version>2.2.2</version>
-		</dependency>
+		</dependency> 
+		-->
 		<!-- Spring Data JPA -->
+		<!-- 
 		<dependency>
 			<groupId>org.springframework.data</groupId>
 			<artifactId>spring-data-jpa</artifactId>
 			<version>1.0.3.RELEASE</version>
 		</dependency>
-		<!-- querydsl -->
+		querydsl
 		<dependency>
 			<groupId>com.mysema.querydsl</groupId>
 			<artifactId>querydsl-core</artifactId>
@@ -156,13 +162,16 @@
 			<groupId>com.mysema.querydsl</groupId>
 			<artifactId>querydsl-jpa</artifactId>
 			<version>${querydsl.version}</version>
-		</dependency>
+		</dependency> 
+		-->
 		<!-- H2 Database -->
+		<!-- 
 		<dependency>
 			<groupId>com.h2database</groupId>
 			<artifactId>h2</artifactId>
 			<version>1.3.160</version>
-		</dependency>
+		</dependency> 
+		-->
 		<!-- MySQL JDBC connector -->
 		<!-- If you want to use MySQL, uncomment this dependency declation. -->
 		<!-- <dependency> <groupId>mysql</groupId> <artifactId>mysql-connector-java</artifactId> 
@@ -172,11 +181,13 @@
 		<!-- <dependency> <groupId>postgresql</groupId> <artifactId>postgresql</artifactId> 
 			<version>9.0-801.jdbc4</version> </dependency> -->
 		<!-- BoneCP -->
+		<!-- 
 		<dependency>
 			<groupId>com.jolbox</groupId>
 			<artifactId>bonecp</artifactId>
 			<version>0.7.1.RELEASE</version>
-		</dependency>
+		</dependency> 
+		-->
 		<!-- Servlet API 3.0 -->
 		<dependency>
 			<groupId>javax.servlet</groupId>
@@ -206,6 +217,24 @@
 			<version>1.2.16</version>
 		</dependency>
 		<!-- Testing Dependencies -->
+		<dependency>
+			<groupId>net.sourceforge.htmlunit</groupId>
+			<artifactId>htmlunit</artifactId>
+			<version>2.6</version>
+			<scope>test</scope>
+		</dependency>
+		<dependency>
+            <groupId>org.mortbay.jetty</groupId>
+            <artifactId>jetty</artifactId>
+            <version>${jetty.version}</version>
+            <scope>test</scope>
+        </dependency>
+        <dependency>
+            <groupId>org.mortbay.jetty</groupId>
+            <artifactId>jsp-2.1-jetty</artifactId>
+            <version>${jetty.version}</version>
+            <scope>test</scope>
+        </dependency>
 		<dependency>
 			<groupId>junit</groupId>
 			<artifactId>junit</artifactId>
